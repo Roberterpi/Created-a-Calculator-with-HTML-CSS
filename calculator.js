@@ -22,6 +22,7 @@ function handleNumber(numberString) {
   } else {
     buffer += numberString;
   }
+  screen.innerText = buffer;
 }
 
 function init () {
