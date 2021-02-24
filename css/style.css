@@ -47,7 +47,8 @@ body {
 
 .calc-button:active {
   background-color: #1e272c;
-  box-shadow: 0px 0px 15px 1px red;
+  box-shadow: 0px 0px 1px 1px red;
+  color: red;
 }
 
 .double {
@@ -59,12 +60,12 @@ body {
 }
 
 .calc-button:last-child {
-  background-color: #dd8d37;
-  color: black;
+  background-color: black;
+  color: red;
 }
 
 .calc-button:last-child:active {
-  background-color: #df974c;
+  color: white;
 }
 
 .calc-button-row {
