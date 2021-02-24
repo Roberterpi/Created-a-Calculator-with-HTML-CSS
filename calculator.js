@@ -107,3 +107,6 @@ function init () {
 }
 
 init();
+
+//for debugging use console.log and the string. example console.log ('numberString', numberString);
+// to use debugger from the browser add debugger; inside a function or where you need it
