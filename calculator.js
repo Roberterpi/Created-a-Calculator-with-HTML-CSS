@@ -41,7 +41,7 @@ function handleMath (symbol) {
     return;
   }
 
-  const intBuffer = pasreInt(buffer);
+  const intBuffer = parseInt(buffer);
 
   if (runningTotal === 0) {
     runningTotal = intBuffer;
