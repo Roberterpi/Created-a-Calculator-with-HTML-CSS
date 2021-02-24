@@ -55,6 +55,13 @@ function handleMath (symbol) {
 }
 
 function flushOperation(intBuffer) {
+  //switch (previousOperator) {
+  //case '+':
+  //  runningTotal += intBuffer;
+  //  break:
+  //case '-':
+  //} etc.
+
   if (previousOperator === '+') {
     runningTotal += intBuffer;
   } else if (previousOperator === '-') {
