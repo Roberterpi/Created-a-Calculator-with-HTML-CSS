@@ -36,7 +36,7 @@ function handleSymbol(symbol) {
       previousOperator = null;
       buffer = runningTotal;
       runningTotal = o;
-      break:
+      break;
     case '+':
     case '-':
     case '×':
