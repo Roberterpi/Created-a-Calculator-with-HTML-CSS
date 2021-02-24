@@ -28,8 +28,8 @@ function handleSymbol(symbol) {
       break;
     case '+':
     case '-':
-    case '&times':
-    case '&divide':
+    case '×':
+    case '÷':
       handleMath(symbol);
       break;
   }
@@ -52,6 +52,18 @@ function handleMath (symbol) {
   previousOperator = symbol;
 
   buffer = '0';
+}
+
+function flushOperation(intBuffer) {
+  if (previousOperator === '+') {
+    runningTotal += intBuffer;
+  } else if (previousOperator === '-') {
+    runningTotal -= intBuffer;
+  } else if (previousOperator === '×') {
+    runningTotal *= intBuffer;
+  } else {
+    runningTotal /= intBuffer;
+  }
 }
 
 function handleNumber(numberString) {
