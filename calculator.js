@@ -35,7 +35,14 @@ function handleSymbol(symbol) {
       flushOperation (parseInt(buffer));
       previousOperator = null;
       buffer = runningTotal;
-      runningTotal = o;
+      runningTotal = 0;
+      break;
+    case '←':
+      if (buffer.length === 1) {
+        buffer = '0';
+      } else {
+        buffer = buffer.substring(0, buffer.length - 1);
+      }
       break;
     case '+':
     case '-':
