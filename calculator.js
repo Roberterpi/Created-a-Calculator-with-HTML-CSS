@@ -1,6 +1,6 @@
 let runningTotal = 0;
 let buffer = '0';
-let previousOperator;
+let previousOperator = null;
 
 const screen = document.querySelector('.screen');
 
@@ -26,6 +26,17 @@ function handleSymbol(symbol) {
       buffer = '0';
       runningTotal = 0;
       break;
+    case '=':
+      //handleEquals etc
+      if (previousOperator === null) {
+        //need two numbers to do math
+        return;
+      }
+      flushOperation (parseInt(buffer));
+      previousOperator = null;
+      buffer = runningTotal;
+      runningTotal = o;
+      break:
     case '+':
     case '-':
     case '×':
