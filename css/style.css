@@ -79,3 +79,8 @@ body {
   justify-content: space-between;
   margin: .5rem;
 }
+@media screen and (max-width: 900px) {
+  .calc {
+    min-width: 100%;
+  }
+}
